@@ -1,0 +1,201 @@
+% Resume template based on Andrew McNabb's creation
+% http://www.mcnabbs.org/andrew/linux/latexres/
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1.1in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=0in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{John M. Reese}
+\newcommand{\addr}{101 Twilight Drive, Fairfield, OH 45014}
+\newcommand{\phone}{(513) 341 - 5338}
+\newcommand{\email}{john @ noswap.com}
+\newcommand{\website}{http:// johnmreese.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{ppl}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{8pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1} --- #2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \website \hfill \phone \ \ \ \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{Rochester Institute of Technology}{Rochester, NY}
+	{Bachelor of Science, Software Engineering:  2004 -- 2009}
+		\ressubitem{Concentrations in Game Development and Political Science}
+		\ressubitem{Worked with a five student team on a six month senior capstone project
+		to design and develop an application sponsored by the Kate Gleason College of Engineering.
+		Built upon an existing framework written in PHP, and utilized jQuery and AJAX to create
+		dynamic user interaction.}
+		\ressubitem{Developed two video games as part of a six student team, using C\# and Xna for
+		the core game engine components and Lua for scripting and entity prototyping.  Implemented
+		rendering, physics, audio, input, and Lua integration for various portions of each project.
+		Created art assets, including sprites, models, and sound effects for both projects.}
+%		\ressubitem{Implemented audio, input, scripting, and behavior systems for a
+%		side-scrolling action adventure featuring a vengeful snail with a jet pack and an arsenal.}
+%		\ressubitem{Created rendering, physics, scripting, gamepad input, and combat systems
+%		for a 3D action racer in an open space setting with six degrees of freedom.}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+
+	\begin{ressubsec}{CBTS, General Electric}{Cincinnati, OH}
+	{Software Engineer: May 2010 -- Present}
+		\ressubitem{Designed and implemented large scale aggregation, and heuristic behavior analysis
+		of network traffic for use by GE security engineers.
+		Implemented using Python and MongoDB for aggregation and analysis, and the Flask web framework
+		for web based searching, monitoring, and administration interface.}
+		\ressubitem{Designed, implemented, and deployed custom data aggregation web application
+		for use by internal GE security teams and related applications.  Gathered feedback and utilized
+		iterative development practices to match evolving requirements from security engineers.
+		Implemented using PHP, CodeIgniter, jQuery/UI, and MySQL.}
+		\ressubitem{Created and maintained internal package mirrors for Ubuntu Linux and Google Chrome.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Redcom Laboratories, Inc.}{Victor, NY}
+	{Software Engineer: June 2006 -- December 2009}
+		\ressubitem{Worked directly with the open source Mantis Bug Tracker team to implement
+		a plugin system, add new features, fix bugs, create development tools, and act as release
+		manager for stable and development versions.  Technologies used include PHP, Python,
+		jQuery, and MySQL.}
+		\ressubitem{Designed and implemented multiple open source plugins for MantisBT, including
+		source control integration with Subversion and Git, and proprietary plugins to integrate
+		with custom applications written in PHP, Perl and C.}
+		\ressubitem{Developed and maintained internal web applications and developer tools.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Masters Department of Product Development, RIT}{Rochester, NY}
+	{Software Engineer: 2004 -- 2005}
+		\ressubitem{Maintained and improved department information and communication web
+		applications written in PHP with a MySQL database.}
+		\ressubitem{Upgraded legacy PHP applications for compatibility with newer servers.}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Projects and Activities}
+
+	\resitem{Contribute to open source projects, including Mantis Bug Tracker, Gnome, and Ubuntu Linux.}
+
+	\resitem{Develop mobile applications for Android smartphones.}
+
+%	\resitem{Create community modifications and total conversions for video games.}
+
+%	\resitem{Maintain a project related blog and issue tracker at http://LeetCode.net.}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ressection}{Technologies}
+
+%	\begin{reslist}{Programming Languages:}
+		%\resitem{Proficient in Python, C++, PHP, SQL, Javascript, UNIX Shells}
+		%\resitem{Familiar with C, C\#/.Net/Xna, Java, Lua, Perl, x86 assembly, LaTeX}
+		%\resitem{Experience with CodeIgniter, Django, jQuery}
+%	\end{reslist}
+
+%	\begin{reslist}{Tools and Systems:}
+%		\resitem{Debian Linux and derivatives, Windows}
+		%\resitem{Apache, MySQL, GNU Make, Git, Subversion, Vim, Eclipse, Visual Studio}
+%	\end{reslist}
+
+
+%\end{ressection}
+
+
+% References
+% \vspace{16pt} {\small\itshape References available upon request.}
+
+\end{document}
