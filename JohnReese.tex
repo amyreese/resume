@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1.1in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=0in}
+\geometry{letterpaper,tmargin=1.0in,bmargin=0.0in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=0in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -75,6 +75,14 @@
 % This is a simple sublist
 \newenvironment{reslist}[1]{
 	\resitem{\textbf{#1}}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+% This is a simple sublist
+\newenvironment{resproject}[1]{
+	\resitem{\textbf{#1}}
 	\vspace{-5pt}
 	\begin{itemize}
 }{
@@ -130,48 +138,62 @@
 
 	\begin{ressubsec}{CBTS, General Electric}{Cincinnati, OH}
 	{Software Engineer: May 2010 -- Present}
-		\ressubitem{Designed and implemented large scale aggregation, and heuristic behavior analysis
-		of network traffic for use by GE security engineers.
-		Implemented using Python and MongoDB for aggregation and analysis, and the Flask web framework
-		for web based searching, monitoring, and administration interface.}
-		\ressubitem{Designed, implemented, and deployed custom data aggregation web application
-		for use by internal GE security teams and related applications.  Gathered feedback and utilized
-		iterative development practices to match evolving requirements from security engineers.
-		Implemented using PHP, CodeIgniter, jQuery/UI, and MySQL.}
-		\ressubitem{Created and maintained internal package mirrors for Ubuntu Linux and Google Chrome.}
+		\ressubitem{Developed large scale, parallel aggregation and analysis of network
+		traffic, with a user interface for monitoring, alerts and administration.
+		Implemented using Python and MongoDB.}
+		\ressubitem{Designed, implemented, and deployed web-based data repository
+		for use by internal GE security engineers and exports to data analysis tools.
+		Implemented using PHP, jQuery/UI, and MySQL.}
 	\end{ressubsec}
 
-	\begin{ressubsec}{Redcom Laboratories, Inc.}{Victor, NY}
+	\begin{ressubsec}{redMatter}{Indie game studio}
+	{Developer: 2009 -- Present}
+		\ressubitem{Created update distribution system for the Overwatch Mod and future projects, using
+		JSON data to automatically download and install new versions.  Components written in Python, C\# and WPF.}
+		\ressubitem{Developed custom tools and plugins to coordinate project development.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Redcom Laboratories}{Victor, NY}
 	{Software Engineer: June 2006 -- December 2009}
 		\ressubitem{Worked directly with the open source Mantis Bug Tracker team to implement
-		a plugin system, add new features, fix bugs, create development tools, and act as release
-		manager for stable and development versions.  Technologies used include PHP, Python,
+		a plugin system, add new features, fix bugs, and create development tools using PHP, Python,
 		jQuery, and MySQL.}
-		\ressubitem{Designed and implemented multiple open source plugins for MantisBT, including
-		source control integration with Subversion and Git, and proprietary plugins to integrate
-		with custom applications written in PHP, Perl and C.}
+		\ressubitem{Designed and implemented multiple open source and proprietary plugins for MantisBT
+		to integrate with in-house applications written in PHP, Perl and C.}
 		\ressubitem{Developed and maintained internal web applications and developer tools.}
 	\end{ressubsec}
 
-	\begin{ressubsec}{Masters Department of Product Development, RIT}{Rochester, NY}
-	{Software Engineer: 2004 -- 2005}
-		\ressubitem{Maintained and improved department information and communication web
-		applications written in PHP with a MySQL database.}
-		\ressubitem{Upgraded legacy PHP applications for compatibility with newer servers.}
-	\end{ressubsec}
+	%\begin{ressubsec}{Masters Department of Product Development, RIT}{Rochester, NY}
+	%{Software Engineer: 2004 -- 2005}
+	%	\ressubitem{Maintained and improved department information and communication web
+	%	applications written in PHP with a MySQL database.}
+	%	\ressubitem{Upgraded legacy PHP applications for compatibility with newer servers.}
+	%\end{ressubsec}
 
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Projects and Activities}
+\begin{ressection}{Open Source}
 
-	\resitem{Contribute to open source projects, including Mantis Bug Tracker, Gnome, and Ubuntu Linux.}
+	\begin{reslist}{Mantis Bug Tracker}
+		\ressubitem{Coordinated, built, tested, and announced new releases.}
+		\ressubitem{Developed multiple plugins, including a source control integration framework
+		with support for Git and Subversion repositories, time estimation and reporting system for projects,
+		global and project announcements, and web analytics support for Google and Piwik.}
+	\end{reslist}
 
-	\resitem{Develop mobile applications for Android smartphones.}
+	\begin{reslist}{ZNC to Notifo}
+		\ressubitem{Created mobile device notification module for IRC chat using C++ and the Notifo service API.}
+	\end{reslist}
 
+	\begin{reslist}{Spotify Gnome}
+		\ressubitem{Implemented DBus wrapper in Python to translate Gnome media key signals to MPRIS2 format.}
+	\end{reslist}
+
+%	\resitem{Contribute to open source projects, including Mantis Bug Tracker, Gnome, and Ubuntu Linux.}
+%	\resitem{Develop mobile applications for Android smartphones.}
 %	\resitem{Create community modifications and total conversions for video games.}
-
 %	\resitem{Maintain a project related blog and issue tracker at http://LeetCode.net.}
 
 \end{ressection}

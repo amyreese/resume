@@ -64,10 +64,9 @@ txt: $(rtxt)
 pdf: $(rpdf)
 	@echo pdf done.
 
-publish: $(rtxt) $(rpdf) $(rtex)
+publish: $(rpdf) $(rtex)
 	scp Makefile $(pubserver):$(pubpath)/Makefile
 	scp $(rtex) $(pubserver):$(pubpath)/$(rtex)
-	scp $(rtxt) $(pubserver):$(pubpath)/$(rtxt)
 	scp $(rpdf) $(pubserver):$(pubpath)/$(rpdf)
 
 clean:
