@@ -30,11 +30,12 @@ $(rdvi): $(rtex)
 
 $(rtxt): $(rdvi)
 	$(mktxt) $(rdvi) > $(rtxt)
+	sed -i -e '/^$$/d' $(rtxt)
 	sed -i -e '/^$$/d' $(rtxt)
 	sed -i -e 's/\([^ ]\)   */\1 /g' $(rtxt)
 	sed -i -e 's/^  *\(John.*\)$$/\1/' $(rtxt)
-	sed -i -e 's/http:\/\/ JohnMReese.com //' -e 's/ - 5338 */ - 5338\n/' $(rtxt)
-	sed -i -e 's/^\([EPT]\)/\n\1/' $(rtxt)
+	sed -i -e 's/http:\/\/ johnmreese.com //' -e 's/ - 5338 */ - 5338\n/' $(rtxt)
+	sed -i -e 's/^\([EO]\)/\n\1/' $(rtxt)
 	sed -i -e 's/ @ /@/' $(rtxt)
 	sed -i -e 's/\(Activities\)$$/\1\n/' $(rtxt)
 	sed -i -e 's/^\(References\)/\n\1/' $(rtxt)
@@ -64,9 +65,10 @@ txt: $(rtxt)
 pdf: $(rpdf)
 	@echo pdf done.
 
-publish: $(rpdf) $(rtex)
+publish: $(rpdf) $(rtxt) $(rtex)
 	scp Makefile $(pubserver):$(pubpath)/Makefile
 	scp $(rtex) $(pubserver):$(pubpath)/$(rtex)
+	scp $(rtxt) $(pubserver):$(pubpath)/$(rtxt)
 	scp $(rpdf) $(pubserver):$(pubpath)/$(rpdf)
 
 clean:
