@@ -1,7 +1,3 @@
 *.swp
-JohnReese.pdf
-JohnReese.txt
-JohnReese.dvi
-JohnReese.aux
-JohnReese.log
-covers
+*.pdf
+*.txt

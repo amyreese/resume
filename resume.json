@@ -1,0 +1,62 @@
+{
+  "bio": {
+    "firstName": "John",
+    "lastName": "Reese",
+    "email": {
+      "personal": "john@noswap.com"
+    },
+    "phone": {
+      "personal": "(513) 341-5338"
+    },
+    "summary": "software engineer, video game enthusiast, free software advocate",
+    "location": {
+      "city": "San Mateo",
+      "countryCode": "US",
+      "state": "California"
+    },
+    "websites": {
+      "blog": "http://noswap.com"
+    },
+    "profiles": {
+      "facebook": "nucleareclipse",
+      "github": "jreese",
+      "twitter": "nuclear_eclipse"
+    }
+  },
+  "work": [
+    {
+      "company": "Facebook",
+      "position": "Production Engineer",
+      "website": "http://facebook.com",
+      "startDate": "2012-06-18",
+      "summary": "Manage thousands of storage servers for photos and video"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Rochester Institute of Technology",
+      "startDate": "2003",
+      "endDate": "2009",
+      "area": "Software Engineer",
+      "studyType": "Bachelors of Science"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Systems",
+      "keywords": [
+        "Linux",
+        "Python",
+        "Shell",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "HTML/CSS",
+        "Javascript"
+      ]
+    }
+  ]
+}
