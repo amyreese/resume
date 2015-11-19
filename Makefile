@@ -56,7 +56,7 @@ $(rtxt): $(rdvi)
 
 $(rpdf): $(rdvi)
 	$(mkpdf) $(rdvi) $(rpdf)
-	sed -i -e 's/\/Title(.*)/\/Title(John M. Reese)/g' $(rpdf)
+	#sed -i -e 's/\/Title(.*)/\/Title(John M. Reese)/g' $(rpdf)
 
 .PHONY: txt pdf clean dist-clean publish
 txt: $(rtxt)
