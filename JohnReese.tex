@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1.0in,bmargin=0.0in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=0in}
+\geometry{letterpaper,tmargin=0.6in,bmargin=0.0in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=0in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -16,7 +16,7 @@
 
 % Name and contact information
 \newcommand{\name}{John M. Reese}
-\newcommand{\addr}{101 Twilight Drive, Fairfield, OH 45014}
+\newcommand{\addr}{2763 S Norfolk St \#111, San Mateo, CA 94403}
 \newcommand{\phone}{(513) 341 - 5338}
 \newcommand{\email}{john @ noswap.com}
 \newcommand{\website}{http:// johnmreese.com}
@@ -136,23 +136,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Experience}
 
+	\begin{ressubsec}{BioWare, Electronic Arts}{San Mateo, CA}
+	{Software Engineer II: October 2011 -- May 2012}
+		\ressubitem{Developed server management and deployment web application with
+		modular framework for administering a large number of virtualized servers
+		running on Amazon Web Services, as well managing AWS accounts, services, and
+		resources.  Implemented using Python, Flask, and jQuery.}
+		\ressubitem{Automated end-to-end deployment of application server stacks using
+			the above framework combined with continuous integration and testing software.}
+	\end{ressubsec}
+
 	\begin{ressubsec}{CBTS, General Electric}{Cincinnati, OH}
-	{Software Engineer: May 2010 -- Present}
+	{Software Engineer: May 2010 -- October 2011}
 		\ressubitem{Developed large scale, parallel aggregation and analysis of network
-		traffic, with a user interface for monitoring, alerts and administration, using Python, MongoDB and Flask.}
+		traffic, with a user interface for monitoring, alerts and administration.
+		Implemented using Python and MongoDB.}
 		\ressubitem{Designed, implemented, and deployed web-based data repository
 		for use by internal GE security engineers and exports to data analysis tools.
-		Uses PHP, Code Igniter, jQuery/UI, and MySQL.}
+		Implemented using PHP, jQuery/UI, and MySQL.}
 	\end{ressubsec}
 
-	\begin{ressubsec}{redMatter}{Indie game studio}
-	{Developer: August 2009 -- Present}
-		\ressubitem{Created update distribution system for the Overwatch Mod and future projects, using
-		JSON data to automatically download and install new versions.  Components written in Python, C\# and WPF.}
-		\ressubitem{Developed custom tools and MantisBT plugins to coordinate project development.}
-	\end{ressubsec}
+	%\begin{ressubsec}{redMatter}{Indie game studio}
+	%{Developer: 2009 -- Present}
+	%	\ressubitem{Created update distribution system for the Overwatch Mod and future projects, using
+	%	JSON data to automatically download and install new versions.  Components written in Python, C\# and WPF.}
+	%	\ressubitem{Developed custom tools and plugins to coordinate project development.}
+	%\end{ressubsec}
 
-	\begin{ressubsec}{Redcom Laboratories}{Victor, NY}
+	\begin{ressubsec}{Redcom Laboratories, Inc.}{Victor, NY}
 	{Software Engineer: June 2006 -- December 2009}
 		\ressubitem{Worked directly with the open source Mantis Bug Tracker team to implement
 		a plugin system, add new features, fix bugs, and create development tools using PHP, Python,
@@ -176,19 +187,19 @@
 \begin{ressection}{Open Source}
 
 	\begin{reslist}{Mantis Bug Tracker}
+		%\ressubitem{Coordinated, built, tested, and announced new releases.}
 		\ressubitem{Developed multiple plugins, including a source control integration framework
-		with support for Git and Subversion repositories, a time estimation and reporting system for projects,
-		global and project announcements, and web analytics support for Google and Piwik, using PHP and jQuery.}
-		\ressubitem{Coordinated, built, tested, and deployed new releases.}
+		with support for Git and Subversion repositories, time estimation and reporting system for projects,
+		global and project announcements, and web analytics support for Google and Piwik.}
 	\end{reslist}
 
-	\begin{reslist}{ZNC to Notifo}
-		\ressubitem{Created mobile device notification module for IRC chat using C++ and the Notifo service API.}
+	\begin{reslist}{ZNC Push}
+		\ressubitem{Created push notification module for IRC chat using C++ and multiple push notification services.}
 	\end{reslist}
 
-	\begin{reslist}{Spotify Gnome}
-		\ressubitem{Implemented DBus wrapper in Python to translate Gnome media key signals to MPRIS2 format.}
-	\end{reslist}
+	%\begin{reslist}{Spotify Gnome}
+	%	\ressubitem{Implemented DBus wrapper in Python to translate Gnome media key signals to MPRIS2 format.}
+	%\end{reslist}
 
 %	\resitem{Contribute to open source projects, including Mantis Bug Tracker, Gnome, and Ubuntu Linux.}
 %	\resitem{Develop mobile applications for Android smartphones.}
